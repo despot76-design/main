@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="오늘 가격과 CPU 세대까지 함께 비교하는 노트북 가성비 비교 서비스" />
+  <title>노트픽 — 오늘 기준 노트북 가성비 비교</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="노트픽 홈">
+      <span class="brand-mark">N</span><span>노트픽</span>
+    </a>
+    <nav>
+      <a href="#ranking">오늘의 가성비</a>
+      <a href="#compare">여러 대 비교</a>
+      <a href="#cpu">CPU 가이드</a>
+    </nav>
+    <div class="updated"><span class="live-dot"></span> 매일 05:00 자동 갱신</div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">오늘 기준으로 다시 계산합니다</div>
+        <h1>노트북, <span>비싸게 사고 있는 건 아닐까?</span></h1>
+        <p>CPU 이름을 몰라도 괜찮습니다. 현재 가격, CPU 세대와 성능, RAM·SSD·화면·무게를 한 번에 대조하고 지금 사도 좋은 가격인지 확인하세요.</p>
+        <div class="hero-actions">
+          <a class="primary" href="#ranking">오늘 추천 보기</a>
+          <a class="secondary" href="#compare">비교표 바로가기</a>
+        </div>
+        <div class="trust-row">
+          <span>✓ 최대 8대 동시 비교</span><span>✓ CPU 최신성 표시</span><span>✓ WOW/일반가 분리</span><span>✓ 가격 이력 기반 판정</span>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="panel-head"><span>가격 기준</span><span class="demo-badge">DEMO</span></div>
+        <div class="price-toggle" role="group" aria-label="가격 기준">
+          <button id="wowBtn" class="active" type="button">WOW 회원가</button>
+          <button id="normalBtn" type="button">일반 가격</button>
+        </div>
+        <div class="snapshot">
+          <span>오늘의 가성비 1위</span>
+          <strong id="heroWinner">Galaxy Book5 Pro 14</strong>
+          <div><b id="heroPrice">1,379,000원</b><em id="heroScore">96점</em></div>
+        </div>
+        <small>현재는 화면 검증용 예시 데이터입니다. 실제 수집기 연결 전에는 구매 판단에 사용하지 마세요.</small>
+      </aside>
+    </section>
+
+    <section class="section" id="ranking">
+      <div class="section-title">
+        <div><span class="kicker">DAILY RANKING</span><h2>오늘 가장 살 만한 노트북</h2><p>단순히 싼 제품이 아니라, 현재 가격 대비 성능과 최신성을 함께 계산합니다.</p></div>
+        <div class="stamp">마지막 정상 갱신<br><strong>DEMO · 05:00 기준</strong></div>
+      </div>
+      <div id="rankingCards" class="ranking-grid"></div>
+    </section>
+
+    <section class="section compare-section" id="compare">
+      <div class="section-title compare-title">
+        <div><span class="kicker">DEEP COMPARE</span><h2>두 대 말고, 정말 여러 대를 비교하세요</h2><p>제품을 최대 8대까지 담고 항목별로 한 줄씩 직접 대조할 수 있습니다.</p></div>
+        <div class="compare-count"><strong id="compareCount">0</strong><span>/ 8대 선택</span></div>
+      </div>
+
+      <div class="compare-controls">
+        <div id="productPicker" class="product-picker"></div>
+        <div class="control-row">
+          <div class="segmented" role="group" aria-label="상세 수준">
+            <button class="detail-btn" data-level="simple">간단히</button>
+            <button class="detail-btn active" data-level="basic">기본</button>
+            <button class="detail-btn" data-level="expert">전문가</button>
+          </div>
+          <label class="switch-label"><input id="diffOnly" type="checkbox" /><span>차이점만 보기</span></label>
+        </div>
+      </div>
+
+      <div class="table-shell">
+        <table id="compareTable" class="compare-table"></table>
+      </div>
+      <div id="emptyCompare" class="empty-compare">위 제품에서 <b>비교 담기</b>를 눌러보세요. 여러 대를 선택할수록 비교표가 옆으로 확장됩니다.</div>
+    </section>
+
+    <section class="section cpu-guide" id="cpu">
+      <div class="section-title">
+        <div><span class="kicker">CPU GUIDE</span><h2>“i7이면 좋은 거 아닌가요?”를 끝냅니다</h2><p>CPU 이름, 세대, 출시 시기, 성능점수, 내장그래픽과 NPU까지 같은 화면에서 설명합니다.</p></div>
+      </div>
+      <div class="cpu-grid">
+        <article><span>01</span><h3>정확한 CPU 모델명</h3><p>‘i7’ 같은 등급명이 아니라 실제 모델명을 기준으로 비교합니다.</p></article>
+        <article><span>02</span><h3>최신성 별도 평가</h3><p>성능이 좋아도 오래된 세대라면 최신성 점수를 따로 표시합니다.</p></article>
+        <article><span>03</span><h3>성능을 숫자로 번역</h3><p>싱글·멀티·그래픽 성능을 100점 척도로 정규화해 초보자도 읽기 쉽게 만듭니다.</p></article>
+        <article><span>04</span><h3>현재 가격까지 결합</h3><p>결국 중요한 것은 그 CPU가 들어간 노트북을 오늘 얼마에 사느냐입니다.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>노트픽</strong><span>오늘 가격으로 다시 고르는 노트북.</span><small>본 DEMO의 가격·점수는 UI 검증용 예시이며 실제 쿠팡 판매정보가 아닙니다.</small>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
