@@ -1,0 +1,35 @@
+{
+  "asOf": "2026-09-10",
+  "vendors": {
+    "Intel": {
+      "currentFamilies": [
+        {"family":"Core Ultra Series 3","generationIndex":3,"status":"latest","launchYear":2026,"notes":"Panther Lake mobile family; Intel 18A"},
+        {"family":"Core Series 3","generationIndex":3,"status":"latest-value","launchYear":2026,"notes":"Value/mobile family based on latest architectures"},
+        {"family":"Core Ultra Series 2","generationIndex":2,"status":"previous","launchYear":2024,"notes":"Includes 200-series mobile parts; some HX Plus parts launched in 2026 but remain Series 2"},
+        {"family":"Core Ultra Series 1","generationIndex":1,"status":"older","launchYear":2023,"notes":"Meteor Lake generation"}
+      ]
+    },
+    "AMD": {
+      "currentFamilies": [
+        {"family":"Ryzen AI 400 Series","generationIndex":4,"status":"latest","launchYear":2026,"notes":"Latest mainstream Ryzen AI mobile generation"},
+        {"family":"Ryzen AI PRO 400 Series","generationIndex":4,"status":"latest","launchYear":2026,"notes":"Commercial Ryzen AI 400 generation"},
+        {"family":"Ryzen AI Max+ 300/400-era","generationIndex":4,"status":"latest-premium","launchYear":2026,"notes":"Premium thin-and-light/workstation class; compare by exact SKU"},
+        {"family":"Ryzen AI 300 Series","generationIndex":3,"status":"previous","launchYear":2024,"notes":"Previous Ryzen AI mobile generation"},
+        {"family":"Ryzen 8000 Mobile","generationIndex":2,"status":"older","launchYear":2024,"notes":"Legacy naming; exact architecture varies by SKU"}
+      ]
+    },
+    "Qualcomm": {
+      "currentFamilies": [
+        {"family":"Snapdragon X2 Series","generationIndex":2,"status":"latest","launchYear":2026,"notes":"Includes X2 Elite Extreme, X2 Elite and X2 Plus"},
+        {"family":"Snapdragon X Series","generationIndex":1,"status":"previous","launchYear":2024,"notes":"First-generation Snapdragon X PC family"}
+      ]
+    },
+    "Apple": {
+      "currentFamilies": [
+        {"family":"Apple M5 family","generationIndex":5,"status":"latest","launchYear":2026,"notes":"M5, M5 Pro and M5 Max are current MacBook generation"},
+        {"family":"Apple M4 family","generationIndex":4,"status":"previous","launchYear":2024,"notes":"Previous Apple Silicon notebook generation"},
+        {"family":"Apple M3 family","generationIndex":3,"status":"older","launchYear":2023,"notes":"Two generations behind M5"}
+      ]
+    }
+  }
+}
